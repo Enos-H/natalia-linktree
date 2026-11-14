@@ -1,9 +1,7 @@
 import type { ComponentType } from 'react'
 import { BookOpen, Laptop, MapPin, Users, Video } from 'lucide-react'
-import { InstagramIcon, WhatsAppIcon } from '../components/brand/SocialIcons'
+import { WhatsAppIcon } from '../components/brand/SocialIcons'
 import {
-  INSTAGRAM_HANDLE,
-  INSTAGRAM_URL,
   WHATSAPP_DISPLAY,
   siteUrl,
   whatsappLink,
@@ -56,13 +54,6 @@ export const bioLinks: BioLink[] = [
     hint: WHATSAPP_DISPLAY,
     href: whatsappLink(),
     icon: WhatsAppIcon,
-    external: true,
-  },
-  {
-    label: 'Instagram',
-    hint: INSTAGRAM_HANDLE,
-    href: INSTAGRAM_URL,
-    icon: InstagramIcon,
     external: true,
   },
 ]

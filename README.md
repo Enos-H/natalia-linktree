@@ -76,7 +76,7 @@ A foto circular é um recorte da foto `nat-01-hero-854.webp` do projeto `natalia
 | Como funciona a consulta online | `/#consulta-online` no site |
 | Sou psicólogo(a) | `/ferramentas/para-psicologos` no site |
 | Falar no WhatsApp | `https://wa.me/5598984359161` com mensagem pronta |
-| Instagram | `https://www.instagram.com/psiquiatranataliabrito/` |
+| Instagram (rodapé) | `https://www.instagram.com/psiquiatranataliabrito/` |
 | CVV / SAMU | `tel:188` / `tel:192` |
 
 Os links abrem na mesma aba, com exceção do Instagram.

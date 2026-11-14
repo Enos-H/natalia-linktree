@@ -7,7 +7,7 @@ import { INSTAGRAM_HANDLE, INSTAGRAM_URL } from '../lib/site'
 
 export function LinktreePage() {
   return (
-    <main className="relative flex min-h-dvh flex-col items-center justify-center overflow-hidden bg-cream px-5 py-8 sm:py-12">
+    <main className="relative flex min-h-dvh flex-col items-center justify-center overflow-hidden bg-cream px-5 py-7 sm:py-10">
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
         <FingerprintPattern className="fingerprint--xl" />
       </div>
@@ -17,7 +17,7 @@ export function LinktreePage() {
 
         <ProfileHeader />
 
-        <p className="mt-5 font-serif text-sm italic text-stone/90 sm:mt-7">
+        <p className="mt-4 font-serif text-sm italic text-stone/90 sm:mt-6">
           clique para acessar:
         </p>
 
@@ -37,7 +37,7 @@ export function LinktreePage() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`Instagram ${INSTAGRAM_HANDLE} (abre em nova aba)`}
-          className="mt-3 text-[0.78rem] text-stone underline-offset-4 transition-colors hover:text-bark hover:underline sm:mt-5"
+          className="mt-2.5 text-[0.78rem] text-stone underline-offset-4 transition-colors hover:text-bark hover:underline sm:mt-4"
         >
           {INSTAGRAM_HANDLE}
         </a>

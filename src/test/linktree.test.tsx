@@ -44,7 +44,7 @@ test('shows credentials, Instagram and the crisis contacts', () => {
   expect(screen.getByRole('link', { name: '192 (SAMU)' })).toHaveAttribute('href', 'tel:192')
 })
 
-test('adds WhatsApp and Instagram as bio links', () => {
+test('adds WhatsApp as a bio link and keeps the Instagram handle', () => {
   renderPage()
 
   const whatsapp = screen.getByRole('link', { name: /falar no whatsapp/i })
@@ -54,13 +54,11 @@ test('adds WhatsApp and Instagram as bio links', () => {
   expect(whatsapp).toHaveAttribute('target', '_blank')
 
   const instagramLinks = screen.getAllByRole('link', { name: /instagram/i })
-  expect(instagramLinks).toHaveLength(2)
-  expect(
-    instagramLinks.every(
-      (link) =>
-        link.getAttribute('href') === 'https://www.instagram.com/psiquiatranataliabrito/',
-    ),
-  ).toBe(true)
+  expect(instagramLinks).toHaveLength(1)
+  expect(instagramLinks[0]).toHaveAttribute(
+    'href',
+    'https://www.instagram.com/psiquiatranataliabrito/',
+  )
 })
 
 test('exposes one accessible heading and the profile photo', () => {
