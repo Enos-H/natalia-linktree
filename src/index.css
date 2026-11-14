@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bark: #472d27;
+  --color-ink: #2c211b;
+  --color-cream: #e0dacb;
+  --color-sand: #c7bbaa;
+  --color-clay: #9e917c;
+  --color-stone: #63584c;
+  --color-paper: #f7f3eb;
+
+  --font-serif: "Bodoni Moda Variable", Georgia, "Times New Roman", serif;
+  --font-sans: "Jost Variable", ui-sans-serif, system-ui, sans-serif;
+
+  --text-xs: 0.8125rem;
+  --text-xs--line-height: 1.25rem;
+  --text-sm: 0.9375rem;
+  --text-sm--line-height: 1.4375rem;
+  --text-base: 1.0625rem;
+  --text-base--line-height: 1.625rem;
+  --text-lg: 1.1875rem;
+  --text-lg--line-height: 1.875rem;
+
+  --shadow-card: 0 18px 50px rgb(71 45 39 / 0.08);
+}
+
+@layer base {
+  html {
+    background-color: var(--color-cream);
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    overflow-x: hidden;
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-serif);
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background-color: var(--color-sand);
+    color: var(--color-bark);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-bark);
+    outline-offset: 4px;
+  }
+
+  a,
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  .fingerprint {
+    background-color: currentColor;
+    -webkit-mask-image: url('/images/fingerprint.svg');
+    mask-image: url('/images/fingerprint.svg');
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    opacity: 0.14;
+    pointer-events: none;
+  }
+
+  .fingerprint--xl {
+    -webkit-mask-size: 155%;
+    mask-size: 155%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
