@@ -69,3 +69,9 @@ test('exposes one accessible heading and the profile photo', () => {
   ).toBeInTheDocument()
   expect(screen.getByAltText('Dra. Natália Brito')).toBeInTheDocument()
 })
+
+test('shows the updated logo wording', () => {
+  renderPage()
+
+  expect(screen.getByAltText('Natália Brito — psiquiatra')).toBeInTheDocument()
+})
