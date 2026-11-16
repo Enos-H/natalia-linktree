@@ -39,7 +39,7 @@ export const bioLinks: BioLink[] = [
   },
   {
     label: 'Como funciona a consulta online',
-    hint: 'Receita digital, reembolso',
+    hint: 'Receita digital, nota fiscal',
     href: siteUrl('/#consulta-online'),
     icon: Laptop,
   },
